@@ -9,9 +9,46 @@
 	<script src="https://kit.fontawesome.com/1997e368d8.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body>
-	<div class="navbar bg-primary flex justify-center text-neutral-content">
-		<p class="normal-case text-xl">Out On A Limb</p>
+
+	<div class="navbar bg-primary text-base-100">
+		<div class="navbar-start">
+			<div class="dropdown">
+				<label tabindex="0" class="btn btn-ghost btn-circle">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+					</svg>
+				</label>
+				<ul tabindex="0"
+					class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-primary">
+					<li class="hover:font-bold"><a href="/">Homepage</a></li>
+					<li class="hover:font-bold"><a>Portfolio</a></li>
+					<li class="hover:font-bold"><a>About</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="navbar-center">
+			<a class="btn btn-ghost normal-case text-xl">Out On A Limb</a>
+		</div>
+		<div class="navbar-end">
+			<button class="btn btn-ghost btn-circle">
+				<a href="tel:123-456-7890">
+					<svg viewBox="0 0 24 24" class="h-5 w-5 hover:fill-base-200 hover:stroke-base-200" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+						<g id="SVGRepo_iconCarrier">
+							<g id="Communication / Phone">
+								<path id="Vector"
+									d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
+									stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</g>
+						</g>
+					</svg>
+				</a>
+			</button>
+		</div>
 	</div>
 	<!-- Hero Start -->
 	<div class="hero min-h-screen" style="background-image: url(/assets/hero.jpg);">
@@ -26,33 +63,147 @@
 		</div>
 	</div>
 	<!-- Hero End -->
-	<div class="flex flex-col container">
-		<div class="flex flex-col container items-center justify-center py-5 text-primary">
-			<i class="fa-solid fa-tree text-3xl"></i>
-			<p class="text-xl   my-2 p-1 font-bold">Trimming and Pruning</p>
+
+
+	<!-- Services Start -->
+	<div class="flex flex-col bg-primary">
+		<div class="flex flex-col container mx-auto items-center justify-center py-5 text-base-100 ">
+			<img src="/assets/tree.svg" class='h-9' alt="tree stump" />
+			<p class="text-xl   my-2 p-1 font-bold">Tree Removal</p>
 			<p class="text-center">Keep your trees looking good with our trimming services</p>
 		</div>
 	</div>
 
-	<div class="flex flex-col bg-primary container">
-		<div class="flex flex-col container items-center justify-center py-5 text-base-100">
-			<img src="/assets/stump.svg" class='h-9' alt="tree stump" />
-			<p class="text-xl   my-2 p-1 font-bold">Stump Grinding</p>
-			<p class="text-center">Oh baby grind on treee</p>
-		</div>
-	</div>
-
-	<div class="flex flex-col container">
-		<div class="flex flex-col container items-center justify-center py-5 text-primary">
+	<div class="flex flex-col mx-auto ">
+		<div class="flex flex-col container mx-auto items-center justify-center py-5 text-primary">
 			<img src="/assets/branch.svg" class='h-9' alt="tree stump" />
-			<p class="text-xl my-2 p-1 font-bold">Limb Removal</p>
+			<p class="text-xl my-2 p-1 font-bold">Pollarding and Pruning</p>
 			<p class="text-center">Pay us the arm and we'll take the limb</p>
 		</div>
 	</div>
 
+	<div class="flex flex-col bg-primary">
+		<div class="flex flex-col bg-primary  container mx-auto items-center justify-center py-5 text-base-100">
+			<img src="/assets/stump.svg" class='h-9' alt="tree stump" />
+			<p class="text-xl   my-2 p-1 font-bold">Topping</p>
+			<p class="text-center">Oh baby grind on treee</p>
+		</div>
+	</div>
 
+	<div class="text-primary divide-y container mx-auto">
+		<p class="text-xl my-2 p-1 font-bold text-center ">Other Services</p>
+		<div class="collapse collapse-plus rounded-none">
+			<input type="radio" name="my-accordion-3" checked="checked" />
+			<div class="collapse-title font-medium">
+				Emergency Services
+			</div>
+			<div class="collapse-content">
+				<p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, explicabo.</p>
+			</div>
+		</div>
+		<div class="collapse collapse-plus rounded-none">
+			<input type="radio" name="my-accordion-3" />
+			<div class="collapse-title font-medium">
+				Storm Clean Up
+			</div>
+			<div class="collapse-content">
+				<p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, inventore!</p>
+			</div>
+		</div>
+		<div class="collapse collapse-plus rounded-none">
+			<input type="radio" name="my-accordion-3" />
+			<div class="collapse-title font-medium">
+				Trimming
+			</div>
+			<div class="collapse-content">
+				<p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, laborum.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Services End -->
+	<!-- Hero Start -->
+	<div class="hero min-h-screen" style="background-image: url(/assets/hero2.jpg);">
+		<div class="hero-overlay bg-opacity-60"></div>
+		<div class="hero-content text-center text-neutral-content">
+			<div class="max-w-xl">
+				<h1 class="text-2xl text-center font-bold">Out On a Limb Tree Care </h1>
+				<p class="text-center text-xl font-medium">Licensed. Insured. Bonded.</p>
+				<p class="py-5 leading-8 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas fugiat
+					et architecto
+					tempora
+					esse
+					eius
+					accusantium eaque nulla nam, dolorum ratione, dolorem deleniti illo deserunt? Cupiditate quae distinctio enim
+					assumenda quos facilis rerum, officia itaque ipsa autem, corporis est perferendis asperiores iste magnam
+					consequuntur eos temporibus cum voluptatem expedita beatae, tempore sequi?.</p>
+				</p>
+				<button class="btn btn-primary">Our Work</button>
+			</div>
+		</div>
 
 	</div>
+	<!-- Hero End -->
+	<div class="relative flex flex-col justify-center overflow-hidden my-10">
+		<div class="w-full p-6 m-auto bg-white shadow-md ring-2 ring-gray-800/50 lg:max-w-xl">
+			<h1 class="text-3xl font-semibold text-center text-primary">Get A Free Estimate</h1>
+			<form class="space-y-4">
+				<div>
+					<label class="label">
+						<span class="text-base label-text">Name</span>
+					</label>
+					<input type="text" placeholder="Name" class="w-full input input-bordered" />
+				</div>
+				<div>
+					<label class="label">
+						<span class="text-base label-text">Email</span>
+					</label>
+					<input type="text" placeholder="Email Address" class="w-full input input-bordered" />
+				</div>
+				<div>
+					<label class="label">
+						<span class="text-base label-text">Phone Number</span>
+					</label>
+					<input type="tel" placeholder="Enter Phone Number" class="w-full input input-bordered" />
+				</div>
+				<div>
+					<label class="label">
+						<span class="text-base label-text">Describe your need</span>
+					</label>
+					<textarea class="textarea  textarea-bordered border-gray-200 w-full textarea-primary overflow-none border-1"
+						placeholder="What do you need help with?"></textarea>
+				</div>
+				<div>
+					<button class="btn btn-block">Submit</button>
+				</div>
+				<span>Questions?
+					<a href="tel:123-456-7890" class="text-blue-600 hover:text-blue-800 hover:underline">Call Us</a></span>
+			</form>
+		</div>
+	</div>
+
+	<footer class="footer footer-center p-10 bg-primary text-base-100 rounded">
+		<div class="grid grid-flow-col gap-4">
+			<a class="link link-hover">About us</a>
+			<a class="link link-hover">Portfolio</a>
+		</div>
+		<div>
+			<ul>
+				<li><a href="tel:123-456-7890">123-456-7890</a></li>
+				<li><a href="mailto:50tree@treemail.com">50tree@treemail.com</a></li>
+			</ul>
+		</div>
+		<div>
+			<div class="grid grid-flow-col gap-4">
+				<a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+						<path
+							d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+						</path>
+					</svg></a>
+			</div>
+		</div>
+	</footer>
 
 
 
