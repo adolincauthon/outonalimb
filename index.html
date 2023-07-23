@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Out On A Limb Tree Care: Your Trusted Local Tree Care Service for Expert Tree Trimming, Safe Tree Removal, Topping, and More. Our skilled arborist is committed to enhancing the health and beauty of your trees while ensuring your property's safety. Experience professional tree care solutions tailored to your needs. Contact us today for reliable and efficient tree services in your area.">
 	<title>Out On A Limb</title>
 	<link href="/styles.css" rel="stylesheet">
 	<link rel="icon" href="/assets/logo.png">
@@ -11,6 +13,28 @@
 
 
 <body>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("cgaFtwqlPtVI7QC6v");
+		})();
+
+		const submitForm = (e) => {
+			e.preventDefault();
+			emailjs.sendForm('default_service', 'template_ku75z5t', '#form')
+				.then(function (response) {
+					const el = document.getElementById('submitted');
+					el.style.display = '';
+					console.log('SUCCESS!', response.status, response.text);
+				}, function (error) {
+					const el = document.getElementById('error')
+					el.style.display = '';
+					console.log('FAILED...', error);
+				});
+		}
+	</script>
+
 	<div class="bg-primary items-center flex justify-center">
 		<div class="navbar text-base-100">
 			<div class="navbar-start ">
@@ -46,8 +70,8 @@
 					<ul tabindex="0"
 						class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-primary">
 						<li class="hover:font-bold"><a href="/">Homepage</a></li>
-						<li class="hover:font-bold"><a href="/portfolio.html">Portfolio</a></li>
-						<li class="hover:font-bold"><a href="/about.html">About</a></li>
+						<li class="hover:font-bold"><a href="/portfolio">Portfolio</a></li>
+						<li class="hover:font-bold"><a href="/about">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -61,7 +85,7 @@
 				<h1 class="mb-5 text-5xl font-bold">Get a quote today</h1>
 				<p class="mb-5">Keep your trees and property healthy with our services
 				</p>
-				<button class="btn btn-primary"><a href="#form">Contact</a></button>
+				<button class="btn btn-primary scroll-btn">Contact</a></button>
 			</div>
 		</div>
 	</div>
@@ -72,7 +96,7 @@
 	<div class="flex flex-col bg-primary">
 		<div class="flex flex-col container mx-auto items-center justify-center py-5 text-base-100 ">
 			<img src="/assets/tree.svg" class='h-9' alt="tree stump" />
-			<p class="text-xl   my-2 p-1 font-bold">Tree Removal</p>
+			<h1 class="text-xl   my-2 p-1 font-bold">Tree Removal</h1>
 			<p class="text-center">Efficient and reliable tree removal service</p>
 		</div>
 	</div>
@@ -80,7 +104,7 @@
 	<div class="flex flex-col mx-auto ">
 		<div class="flex flex-col container mx-auto items-center justify-center py-5 text-primary">
 			<img src="/assets/branch.svg" class='h-9' alt="tree stump" />
-			<p class="text-xl my-2 p-1 font-bold">Pollarding and Pruning</p>
+			<h1 class="text-xl my-2 p-1 font-bold">Pollarding and Pruning</h1>
 			<p class="text-center">Experience top-notch pollarding and pruning services aimed at enhancing the health,
 				beauty, and vitality of your beloved trees.</p>
 		</div>
@@ -89,7 +113,7 @@
 	<div class="flex flex-col bg-primary">
 		<div class="flex flex-col bg-primary  container mx-auto items-center justify-center py-5 text-base-100">
 			<img src="/assets/stump.svg" class='h-9' alt="tree stump" />
-			<p class="text-xl   my-2 p-1 font-bold">Topping</p>
+			<h1 class="text-xl   my-2 p-1 font-bold">Topping</h1>
 			<p class="text-center">Topping for healthy growth and enhanced tree aesthetics</p>
 		</div>
 	</div>
@@ -99,28 +123,35 @@
 		<div class="collapse collapse-plus rounded-none">
 			<input type="radio" name="my-accordion-3" checked="checked" />
 			<div class="collapse-title font-medium">
-				Emergency Services
+				<h1>
+					Emergency Services
+				</h1>
 			</div>
 			<div class="collapse-content">
-				<p class="text-sm">Prompt and reliable emergency tree services for urgent tree-related situations.</p>
+				<h2 class="text-sm">Prompt and reliable emergency tree services for urgent tree-related situations.</h2>
 			</div>
 		</div>
 		<div class="collapse collapse-plus rounded-none">
 			<input type="radio" name="my-accordion-3" />
 			<div class="collapse-title font-medium">
-				Storm Clean Up
+				<h1>
+					Storm Clean Up
+				</h1>
+
 			</div>
 			<div class="collapse-content">
-				<p class="text-sm">Efficient storm cleanup services for clearing debris and restoring your surroundings.</p>
+				<h2 class="text-sm">Efficient storm cleanup services for clearing debris and restoring your surroundings.</h2>
 			</div>
 		</div>
 		<div class="collapse collapse-plus rounded-none">
 			<input type="radio" name="my-accordion-3" />
 			<div class="collapse-title font-medium">
-				Trimming
+				<h1>
+					Tree Trimming
+				</h1>
 			</div>
 			<div class="collapse-content">
-				<p class="text-sm">Precision tree trimming services for enhanced tree health and aesthetic appeal.</p>
+				<h2 class="text-sm">Precision tree trimming services for enhanced tree health and aesthetic appeal.</h2>
 			</div>
 		</div>
 	</div>
@@ -146,59 +177,75 @@
 					while maintaining a safe and stunning landscape. Contact us today for a consultation and let our tree care
 					experts bring their expertise to your property.</p>
 				</p>
-				<button class="btn btn-primary"> <a href="/portfolio.html">Our Work</a></button>
+				<button class="btn btn-primary"> <a href="/portfolio">Our Work</a></button>
 			</div>
 		</div>
 
 	</div>
 	<!-- Hero End -->
-	<div class="relative flex flex-col justify-center overflow-hidden my-10">
+	<div id="formContainer" class="relative flex flex-col justify-center overflow-hidden my-10">
 		<div class="w-full p-6 m-auto bg-white shadow-md ring-2 ring-gray-800/50 lg:max-w-xl">
 			<h1 class="text-3xl font-semibold text-center text-primary">Get A Free Estimate</h1>
-			<form id="form" class="space-y-4">
+			<form id="form" onsubmit="submitForm(event)" class="space-y-4">
 				<div>
 					<label class="label">
 						<span class="text-base label-text">Name</span>
 					</label>
-					<input type="text" placeholder="Name" class="w-full input input-bordered" />
+					<input type="text" name="name" placeholder="Name" required class="w-full input input-bordered" />
 				</div>
 				<div>
 					<label class="label">
 						<span class="text-base label-text">Email</span>
 					</label>
-					<input type="text" placeholder="Email Address" class="w-full input input-bordered" />
+					<input type="text" name="email" placeholder="Email Address" required class="w-full input input-bordered" />
 				</div>
 				<div>
 					<label class="label">
 						<span class="text-base label-text">Phone Number</span>
 					</label>
-					<input type="tel" placeholder="Enter Phone Number" class="w-full input input-bordered" />
+					<input type="tel" name="number" placeholder="Enter Phone Number" class="w-full input input-bordered" />
 				</div>
 				<div>
 					<label class="label">
 						<span class="text-base label-text">Describe your need</span>
 					</label>
-					<textarea class="textarea  textarea-bordered border-gray-200 w-full textarea-primary overflow-none border-1"
+					<textarea name="details" form="form" required
+						class="textarea  textarea-bordered border-gray-200 w-full textarea-primary overflow-none border-1"
 						placeholder="What do you need help with?"></textarea>
 				</div>
 				<div>
 					<button class="btn btn-block">Submit</button>
 				</div>
 				<span>Questions?
-					<a href="tel:123-456-7890" class="text-blue-600 hover:text-blue-800 hover:underline">Call Us</a></span>
+					<a href="tel:360-560-5422" class="text-blue-600 hover:text-blue-800 hover:underline">Call Us</a></span>
 			</form>
+			<div id="error" class="alert alert-error my-5" style="display: none;">
+				<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+				</svg>
+				<span>Issue submitting form. Please email or call us directly</span>
+			</div>
+			<div id="submitted" class="alert alert-success my-5" style="display: none;">
+				<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+				</svg>
+				<span>Your estimate has been submitted. We will be in touch soon.</span>
+			</div>
 		</div>
 	</div>
 
+
 	<footer class="footer footer-center p-10 bg-primary text-base-100 rounded">
 		<div class="grid grid-flow-col gap-4">
-			<a class="link link-hover" href="/about.html">About us</a>
-			<a class="link link-hover" href="/portfolio.html">Portfolio</a>
+			<a class="link link-hover" href="/about">About us</a>
+			<a class="link link-hover" href="/portfolio">Portfolio</a>
 		</div>
 		<div>
 			<ul>
-				<li><a href="tel:123-456-7890">360-560-5422</a></li>
-				<li><a href="mailto:50tree@treemail.com">josh.d.white86@gmail.com</a></li>
+				<li><a href="tel:360-560-5422">360-560-5422</a></li>
+				<li><a href="mailto:josh.d.white86@gmail.com">josh.d.white86@gmail.com</a></li>
 			</ul>
 		</div>
 		<div>
@@ -214,7 +261,15 @@
 	</footer>
 
 
+	<script>
+		document.querySelector('.scroll-btn').addEventListener('click', function (e) {
+			e.preventDefault();
+			const formElement = document.querySelector('#form');
+			formElement.scrollIntoView({ behavior: 'smooth' });
+		});
 
+
+	</script>
 </body>
 
 </html>
